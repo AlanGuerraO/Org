@@ -1,14 +1,14 @@
-import { useState } from 'react'
-import './App.css'
-import Header from './componentes/header/header.jsx'
-console.log(Header)
+import "./App.css";
+import Header from "./componentes/header/header.jsx";
+import Formulario from "./componentes/Formulario/Formulario.jsx";
 
 function App() {
-  return (
-    <>
-      <Header />
-    </>
-  )
+    return (
+        <>
+            <Header />
+            <Formulario />
+        </>
+    );
 }
 
-export default App
+export default App;
