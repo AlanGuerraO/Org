@@ -4,6 +4,7 @@ import Header from "./componentes/header/header.jsx";
 import Formulario from "./componentes/Formulario/Formulario.jsx";
 import MiOrg from "./componentes/MiOrg/MiOrg.jsx";
 import Equipo from "./componentes/Equipo/Equipo.jsx";
+import Footer from "./componentes/Footer/Footer.jsx";
 
 function App() {
     // Operador ternario --> condicion ? SeMuestra : NoSeMuestra
@@ -72,12 +73,13 @@ function App() {
                 />
             }
             <MiOrg cambiarMostrar={cambiarMostrar} />
-            { EQUIPOS.map( (equipo) => 
+            {EQUIPOS.map( (equipo) => 
                 <Equipo datos={equipo} 
                     key={equipo.titulo}
                     colaborador={colaboradores.filter((colaborador) => colaborador.equipo === equipo.titulo)}
                 /> 
-            ) }
+            )}
+            <Footer />
         </>
     );
 }

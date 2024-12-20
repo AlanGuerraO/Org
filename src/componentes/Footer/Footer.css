@@ -1,0 +1,30 @@
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5%;
+    box-sizing: border-box;
+    background-position: center;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    gap: 20px;
+}
+
+.redes-sociales {
+    display: flex;
+    gap: 25px;
+}
+
+.redes-sociales img {
+    width: 30px;
+    height: 30px;
+}
+
+.footer img {
+    max-width: 150px; /* Ajusta el tamaño del logo según lo necesario */
+    height: auto;
+    margin: 20px 0; /* Espaciado opcional */
+}
