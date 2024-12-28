@@ -5,7 +5,7 @@ import hexToRgba from "hex-to-rgba";
 const Equipo = (props) => {
     // Destructuracion de objetos
     // En lugar de hacer const titulo = props.datos.titulo, por cada propiedad, se hace lo siguiente:
-    const { titulo, colorPrimario, colorSecundario } = props.datos;
+    const { titulo, colorPrimario, colorSecundario, id } = props.datos;
     const {colaborador, eliminarColaborador, actualizarColor} = props;
 
     const fondo = { backgroundColor: hexToRgba(colorPrimario, 0.5)};
@@ -19,7 +19,7 @@ const Equipo = (props) => {
                     type="color" 
                     className="input-color"
                     value={colorPrimario}
-                    onChange={(e) => actualizarColor(e.target.value, titulo)}
+                    onChange={(e) => actualizarColor(e.target.value, id)}
                 />
                 <h3 style={estiloTitulo}>{titulo}</h3>
                 <div className="colaboradores">
