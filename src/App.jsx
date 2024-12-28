@@ -11,7 +11,36 @@ function App() {
     // Corto circuito --> condicion && SeMuestra
 
     const [mostrarFormulario, actualizarMostrar] = useState(false);
-    const [colaboradores, actualizarColaboradores] = useState([]);
+    const [colaboradores, actualizarColaboradores] = useState([{
+        equipo: "Front End",
+        foto: "https://github.com/harlandlohora.png",
+        nombre: "Harland Lohora",
+        puesto: "Instructor"
+      },
+      {
+        equipo: "Programación",
+        foto: "https://github.com/alanguerrao.png",
+        nombre: "Alan Guerra",
+        puesto: "Desarrollador de software"
+      },
+      {
+        equipo: "UX y Diseño",
+        foto: "https://github.com/JeanmarieAluraLatam.png",
+        nombre: "Jeanmarie Quijada",
+        puesto: "Instructora en Alura Latam"
+      },
+      {
+        equipo: "Programación",
+        foto: "https://github.com/christianpva.png",
+        nombre: "Christian Velasco",
+        puesto: "Head de Alura e Instructor"
+      },
+      {
+        equipo: "Innovación y  Gestión",
+        foto: "https://github.com/JoseDarioGonzalezCha.png",
+        nombre: "Jose Gonzalez",
+        puesto: "Dev FullStack"
+    }])
 
     const cambiarMostrar = () => {
         actualizarMostrar(!mostrarFormulario);
@@ -22,6 +51,11 @@ function App() {
         console.log("Colaborador agregado",colaborador);
         // Spread operator
         actualizarColaboradores([...colaboradores,colaborador]);
+    };
+
+    // Eliminar Colaborador
+    const eliminarColaborador = () => {
+        console.log("Colaborador eliminado");
     };
 
     const EQUIPOS = [
@@ -77,6 +111,7 @@ function App() {
                 <Equipo datos={equipo} 
                     key={equipo.titulo}
                     colaborador={colaboradores.filter((colaborador) => colaborador.equipo === equipo.titulo)}
+                    eliminarColaborador={eliminarColaborador}
                 /> 
             )}
             <Footer />
