@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { v4 as uuid } from "uuid";
 import "./App.css";
-import Header from "./componentes/Header/Header.jsx";
-import Formulario from "./componentes/Formulario/Formulario.jsx";
-import MiOrg from "./componentes/MiOrg/MiOrg.jsx";
-import Equipo from "./componentes/Equipo/Equipo.jsx";
-import Footer from "./componentes/Footer/Footer.jsx";
+import Header from "./componentes/Header/Header";
+import Formulario from "./componentes/Formulario/Formulario";
+import MiOrg from "./componentes/MiOrg/MiOrg";
+import Equipo from "./componentes/Equipo/Equipo";
+import Footer from "./componentes/Footer/Footer";
 
 function App() {
     // Operador ternario --> condicion ? SeMuestra : NoSeMuestra
