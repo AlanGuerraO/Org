@@ -1,9 +1,9 @@
-.campo-texto {
+.campo {
     font-family: "Montserrat", sans-serif;
     margin: 24px 0;
 }
 
-.campo-texto label {
+.campo label {
     font-family: "Montserrat", sans-serif;
     font-size: 18px;
     font-weight: 600;
@@ -11,7 +11,7 @@
     display: block;
 }
 
-.campo-texto input {
+.campo input {
     font-family: "Montserrat", sans-serif;
     width: 100%;
     outline-color: #6278F7;
@@ -22,4 +22,9 @@
     font-size: 16px;
     border-radius: 15px;
     box-sizing: border-box;
+}
+
+.campo-color input {
+    height: 40px;
+    padding: 5px 20px;
 }

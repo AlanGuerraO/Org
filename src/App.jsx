@@ -11,7 +11,7 @@ function App() {
     // Operador ternario --> condicion ? SeMuestra : NoSeMuestra
     // Corto circuito --> condicion && SeMuestra
 
-    const [mostrarFormulario, actualizarMostrar] = useState(false);
+    const [mostrarFormulario, actualizarMostrar] = useState(true);
     const [colaboradores, actualizarColaboradores] = useState([{
         id: uuid(),
         equipo: "Front End",
