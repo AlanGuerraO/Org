@@ -6,7 +6,7 @@ const Equipo = (props) => {
     // Destructuracion de objetos
     // En lugar de hacer const titulo = props.datos.titulo, por cada propiedad, se hace lo siguiente:
     const { titulo, colorPrimario, colorSecundario, id } = props.datos;
-    const {colaborador, eliminarColaborador, actualizarColor} = props;
+    const {colaborador, eliminarColaborador, actualizarColor, like} = props;
 
     const fondo = { backgroundColor: hexToRgba(colorPrimario, 0.5)};
     const estiloTitulo = { borderColor: colorPrimario };
@@ -28,7 +28,8 @@ const Equipo = (props) => {
                             key={index} 
                             datos={colaborador} 
                             colorPrimario={colorPrimario}
-                            eliminarColaborador={eliminarColaborador}   
+                            eliminarColaborador={eliminarColaborador}
+                            like={like}
                         />
                     )}
                 </div>

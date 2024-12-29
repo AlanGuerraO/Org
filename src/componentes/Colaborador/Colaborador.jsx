@@ -1,9 +1,9 @@
 import "./Colaborador.css";
-import { AiFillCloseCircle } from "react-icons/ai";
+import { AiFillCloseCircle, AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 
 const Colaborador = (props) => {
-    const {colorPrimario, eliminarColaborador} = props;
-    const { nombre, foto, puesto, equipo, id } = props.datos;
+    const {colorPrimario, eliminarColaborador, like} = props;
+    const { nombre, foto, puesto, equipo, id, fav } = props.datos;
 
     const fondo = { background: colorPrimario };
 
@@ -15,6 +15,7 @@ const Colaborador = (props) => {
         <div className="info">
             <h4>{nombre}</h4>
             <h5>{puesto}</h5>
+            {fav === true ? <AiFillHeart color="red" onClick={() => like(id)}/> : <AiOutlineHeart onClick={() => like(id)}/>}
         </div>
     </div>
 };
