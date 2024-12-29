@@ -121,6 +121,12 @@ function App() {
         actualizarEquipos(equiposActualizados);
     };
 
+    // Crear un nuevo equipo
+    const crearEquipo = (nuevoEquipo) => {
+        console.log("Equipo creado", nuevoEquipo);
+        actualizarEquipos([...EQUIPOS, {...nuevoEquipo, id: uuid()}]);
+    };
+
     return (
         <>
             <Header />
@@ -129,6 +135,7 @@ function App() {
                 mostrarFormulario && <Formulario 
                     equipos={EQUIPOS.map((equipo) => equipo.titulo)}
                     registrarColaborador = {registrarColaborador}
+                    crearEquipo = {crearEquipo}
                 />
             }
             <MiOrg cambiarMostrar={cambiarMostrar} />
