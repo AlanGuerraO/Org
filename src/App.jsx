@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { v4 as uuid } from "uuid";
 import "./App.css";
-import Header from "./componentes/header/header.jsx";
+import Header from "./componentes/Header/Header.jsx";
 import Formulario from "./componentes/Formulario/Formulario.jsx";
 import MiOrg from "./componentes/MiOrg/MiOrg.jsx";
 import Equipo from "./componentes/Equipo/Equipo.jsx";
